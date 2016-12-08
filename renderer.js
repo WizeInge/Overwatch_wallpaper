@@ -26,4 +26,9 @@ $('#displayFs').on('click', function(){
 //Loader
 setTimeout(function(){
     $('#loader').fadeToggle()
+    clearInterval(addPoint);
 }, 8000)
+
+var addPoint = setInterval(function(){
+    $('#textLoad').append('.')
+}, 2000)
