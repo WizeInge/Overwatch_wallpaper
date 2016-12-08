@@ -17,7 +17,7 @@ function createWindow () {
   const size = electronScreen.getPrimaryDisplay().size
 
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: size.width, height: size.height, frame: false})
+  mainWindow = new BrowserWindow({width: size.width, height: size.height, frame: false, resizable: false})
 
   // and load the index.html of the app.
   mainWindow.loadURL(url.format({
