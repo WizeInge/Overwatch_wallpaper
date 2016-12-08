@@ -1,3 +1,22 @@
-// This file is required by the index.html file and will
-// be executed in the renderer process for that window.
-// All of the Node.js APIs are available in this process.
+//Quit App Btn
+const remote = require('electron').remote;
+window.$ = window.jQuery = require('jquery')
+
+const closeAppBtn = document.getElementById('closeApp')
+closeAppBtn.addEventListener('click', function(){
+  console.log("closeApp")
+  var window = remote.getCurrentWindow();
+  window.close();
+})
+
+//Hover img
+$.each($('.wallpaper'), function(){
+  $(this).on('mouseenter', function(e){
+    console.log(e);
+    $(this).css('width', '250')
+  })
+  $(this).on('mouseleave', function(e){
+    console.log(e);
+    $(this).css('width', '120')
+  })
+})
