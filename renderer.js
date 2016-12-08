@@ -1,5 +1,19 @@
 window.$ = window.jQuery = require('jquery')
 
+//Quit App Btn
+ const remote = require('electron').remote;
+
+ $('#closeApp').on('mouseover', function(){
+   $('#textClose').fadeToggle();
+ })
+ $('#closeApp').on('mouseleave', function(){
+   $('#textClose').fadeToggle();
+ })
+ $('#closeApp').on('click', function(){
+   var window = remote.getCurrentWindow();
+   window.close();
+ })
+
 //Hover img
 $.each($('.wallpaper'), function(){
   $(this).on('mouseenter', function(){

@@ -18,6 +18,27 @@ h1{
   font-size: 55px;
 }
 
+#closeApp{
+  position: absolute;
+  background: #fc5753;
+  border: 1px solid #df4744;
+  top: 10px;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+#closeApp:hover{
+  background: #a53936;
+}
+#textClose{
+  display: none;
+  font-size: 20px;
+  float: left;
+  position: absolute;
+}
+
 .content{
   margin-top: 150px;
   width: 100%;
