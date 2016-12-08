@@ -20,9 +20,10 @@ $.each($('.wallpaper'), function(){
     $(this).css('width', '320')
   })
   $(this).on('mouseleave', function(){
-    $(this).css('width', '120')
+    $(this).css('width', '100')
   })
 })
+
 //OnClick img
 $.each($('.wallpaper'), function(){
   $(this).on('click', function(){
@@ -36,6 +37,11 @@ $('#displayFs').on('click', function(){
   $('#displayFs').fadeToggle();
   $('#flou').fadeToggle();
 })
+
+//width .content dynamic
+var wallCount = $('.wallpaper').length
+var wallTot = 115 * wallCount
+$('.content').width(wallTot)
 
 //Loader
 setTimeout(function(){
