@@ -1,8 +1,23 @@
 window.$ = window.jQuery = require('jquery')
+const remote = require('electron').remote;
+const path = require('path');
+const wallpaper = require('wallpaper');
+
+//Notification
+var opt = [];
+var dir = '';
+function notify(){
+  if(opt != null){
+    new Notification(opt[0].title, opt[0]);
+  }
+}
+  $('#set').on('click', function(){
+    wallpaper.set(dir).then(() => {
+      notify()
+    });
+})
 
 //Quit App Btn
- const remote = require('electron').remote;
-
  $('#closeApp').on('mouseover', function(){
    $('#textClose').fadeToggle();
  })
@@ -27,15 +42,22 @@ $.each($('.wallpaper'), function(){
 //OnClick img
 $.each($('.wallpaper'), function(){
   $(this).on('click', function(){
-    $('#displayFs').fadeToggle();
-    $('#flou').fadeToggle();
-    $('#displayFs').css('background', 'url(' + $(this).find('img').attr('src') + ') center center');
+    $('#displayFs').fadeToggle()
+    $('#flou').fadeToggle()
+    $('#displayFs').css('background', 'url(' + $(this).find('img').attr('src') + ') no-repeat center center /cover');
+    opt = [{
+              title: 'Done :)',
+              body: 'Wallpaper ' + $(this).find('img').attr('src') + ' set !',
+              icon: path.join(__dirname, $(this).find('img').attr('src'))
+          }]
+    dir = $(this).find('img').attr('src')
+    $('#set').fadeIn('slow').show()
   })
 })
 
 $('#displayFs').on('click', function(){
-  $('#displayFs').fadeToggle();
-  $('#flou').fadeToggle();
+  $('#displayFs').fadeToggle()
+  $('#flou').fadeToggle()
 })
 
 //width .content dynamic
@@ -47,7 +69,7 @@ $('.content').width(wallTot)
 setTimeout(function(){
     $('#loader').fadeToggle()
     clearInterval(addPoint);
-}, 8000)
+}, 2000)
 
 var addPoint = setInterval(function(){
     $('#textLoad').append('.')

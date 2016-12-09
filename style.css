@@ -84,6 +84,28 @@ h1{
   transform: translate(-56%, -30%) skew(-30deg) scale(1.6);
 }
 
+#set{
+  display: none;
+  z-index: 15;
+  position: relative;
+  background: black;
+  cursor: pointer;
+  width: 250px;
+  margin: 0 auto;
+  margin-top: 50px;
+  border: 1px solid white;
+  padding: 15px;
+  transition: all .3s ease-out;
+}
+#set:hover{
+  border: 1px solid #fc5753;
+  color: #fc5753;
+}
+#set p{
+  font-size: 20px;
+  margin: 0;
+}
+
 #displayFs{
   display: none;
   position: absolute;
@@ -107,6 +129,26 @@ h1{
   display: none;
   background: rgba(0, 0, 0, 0.80);
 }
+
+/* === SCROLL BAR === */
+::-webkit-scrollbar {
+    height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #39393b;
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	  background: #39393b;
+}
+
 /* === COMMON === */
 .center{
   text-align: center;

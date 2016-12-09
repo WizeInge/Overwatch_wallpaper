@@ -1,25 +1,24 @@
 {
-  "name": "electron-quick-start",
+  "name": "ow-design-wallpaper",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Set a OW wallpaper",
   "main": "main.js",
   "scripts": {
     "start": "electron ."
   },
-  "repository": "https://github.com/electron/electron-quick-start",
+  "repository": "https://github.com/WizeInge/Overwatch_wallpaper",
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
+    "Overwatch",
+    "wallpaper"
   ],
-  "author": "GitHub",
+  "author": "Wize",
   "license": "CC0-1.0",
   "devDependencies": {
     "electron": "^1.4.1"
   },
   "dependencies": {
-    "jquery": "^3.1.1"
+    "jquery": "^3.1.1",
+    "wallpaper": "^2.3.0"
   }
 }
