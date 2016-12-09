@@ -69,7 +69,7 @@ $('.content').width(wallTot)
 setTimeout(function(){
     $('#loader').fadeToggle()
     clearInterval(addPoint);
-}, 2000)
+}, 8000)
 
 var addPoint = setInterval(function(){
     $('#textLoad').append('.')
