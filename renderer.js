@@ -58,6 +58,7 @@ $.each($('.wallpaper'), function(){
 $('#displayFs').on('click', function(){
   $('#displayFs').fadeToggle()
   $('#flou').fadeToggle()
+  $('#set').fadeIn('slow').hide()
 })
 
 //width .content dynamic
